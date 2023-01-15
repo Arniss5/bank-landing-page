@@ -1,9 +1,8 @@
 /* font-family: 'Public Sans', sans-serif; */
-
-.root {
+:root {
     --dark-blue: rgb(45, 49, 77);
-    --lime-green: rgb(49, 211, 92);
-    --bright-cyan: rgb(43, 183, 218);
+    --lime-green: #31d35c;
+    --bright-cyan: #2bb7da;
     --greyish-blue: rgb(150, 152, 166);
     --light-greyish-blue: rgb(243, 244, 246);
     --very-light-grey: rgb(250, 250, 250);
@@ -16,11 +15,11 @@
     margin: 0;
 }
 
+
 /* Typography */
 body {
     font-size: 1.1rem;
     color: var(--dark-blue);
-    background-color: var(--dark-blue);
 }
 
 h1, h2, h3 {
@@ -39,11 +38,86 @@ h3 {
     font-size: 1.3rem;
 }
 
-p {
-    color: var(--light-greyish-blue);
+nav a, button {
+    font-size: 1rem;
 }
 
-/* Layout */
-.articles-section {
-    background-color: var(--dark-blue);
+p, nav a {
+    color: var(--greyish-blue);
+}
+
+button {
+    font-family: inherit;
+    font-weight: 700;
+}
+
+
+/* Flex*/
+header, nav, nav>ul, section, footer, .container {
+    display: flex;
+    align-items: center;
+}
+
+
+
+/* BUTTONS */
+.cta-btn {
+    color: white;
+    background: var(--lime-green);
+    background: linear-gradient(48deg, var(--lime-green) 0%, var(--bright-cyan) 100%);
+    padding: .8rem 2rem;
+    border: none;
+    border-radius: 1.5em;
+}
+
+.cta-btn:hover {
+    background: var(--lime-green);
+    background: linear-gradient(48deg, rgba(49,211,92,.65) 0%, rgba(43,183,218,.65) 100%);
+    cursor: pointer;
+}
+
+
+/* HEADER */
+header {
+    justify-content: space-around;
+    padding: 1em 0;
+}
+
+nav ul {
+    list-style-type: none;
+    gap: .8em;
+}
+
+nav li {
+    position: relative
+}
+
+
+
+/* nav li:hover {
+    border-bottom: .3rem var(--lime-green) solid;
+} */
+
+nav a {
+    color: var(--greyish-blue);
+    text-decoration: none;
+}
+
+nav li::after {
+    position: absolute;
+    content: "";
+    display: block;
+    width: 100%;
+    height: .3rem;
+    background: transparent;
+    transition: background 0.2s;
+    top: 2.8rem;
+}
+
+nav li:hover::after {
+    background: linear-gradient(48deg, var(--lime-green) 0%, var(--bright-cyan) 100%);
+}
+
+section {
+    background-color: #2bb7da;
 }
