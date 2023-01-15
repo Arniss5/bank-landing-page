@@ -1,0 +1,49 @@
+/* font-family: 'Public Sans', sans-serif; */
+
+.root {
+    --dark-blue: rgb(45, 49, 77);
+    --lime-green: rgb(49, 211, 92);
+    --bright-cyan: rgb(43, 183, 218);
+    --greyish-blue: rgb(150, 152, 166);
+    --light-greyish-blue: rgb(243, 244, 246);
+    --very-light-grey: rgb(250, 250, 250);
+}
+
+* {
+    font-family: 'Public Sans', sans-serif;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+/* Typography */
+body {
+    font-size: 1.1rem;
+    color: var(--dark-blue);
+    background-color: var(--dark-blue);
+}
+
+h1, h2, h3 {
+    font-weight: 300;
+}
+
+h1 {
+    font-size: 3.2rem;
+}
+
+h2 {
+    font-size: 2.2rem;
+}
+
+h3 {
+    font-size: 1.3rem;
+}
+
+p {
+    color: var(--light-greyish-blue);
+}
+
+/* Layout */
+.articles-section {
+    background-color: var(--dark-blue);
+}
