@@ -83,7 +83,7 @@ section, footer {
 }
 
 .container {
-    gap: 1em;
+    gap: 2vw;
     padding: 3em 0;
 }
 
@@ -139,7 +139,7 @@ nav li::after {
     height: .3rem;
     background: transparent;
     transition: background 0.2s;
-    top: 2.8rem;
+    top: 3rem;
 }
 
 nav li:hover::after {
@@ -161,6 +161,7 @@ nav li:hover::after {
 }
 
 .hero-text p {
+    max-width: 500px;
     margin-bottom: 3em;
 }
 
@@ -183,12 +184,16 @@ nav li:hover::after {
 }
 
 .service, article {
-    width: 18vw;
+    /* width: 18vw; */
     overflow: hidden;
 }
 
 .services-section {
     background-color: var(--light-greyish-blue);
+}
+
+.services-container {
+    align-content: space-between;
 }
 
 .services-main {
@@ -268,4 +273,53 @@ footer {
     cursor: pointer;
     filter: sepia(25%) saturate(10000%) hue-rotate(80deg) brightness(90%) contrast(118%);
     
+}
+
+
+/* MEDIA QUERIES */
+
+@media (min-width: 1500px) {
+    .hero-text p {
+        max-width: 350px;
+    }
+}
+
+@media (min-width: 2000px) {
+    body, nav a  {
+        font-size: 1.3rem;
+    }
+
+    h1 {
+        font-size: 5rem
+    }
+
+    h2 {
+        font-size: 3.2rem;
+    }
+    
+    h3 {
+        font-size: 1.7rem;
+    }
+    
+    .cta-btn {
+        font-size: 1.6rem;
+    }
+
+    .logo-icon, .hero-img, .service-img {
+        transform: scale(1.3);
+    }
+
+    .service-img {
+        margin: .8em 0 0 .8em;
+    }
+
+    nav li::after {
+        top: 3.68rem;
+    }
+}
+
+@media (min-width: 1500px) {
+    .hero-text p {
+        max-width: 350px;
+    }
 }
