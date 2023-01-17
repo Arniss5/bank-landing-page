@@ -120,13 +120,20 @@ header .cta-btn {
     display: none;
 }
 
-.hamburger {
+.fa-bars,
+.fa-xmark {
     margin-left: auto;
     cursor: pointer;
-    scale: 1.2;
+    scale: 1.5;
 }
 
-.cta-btn:hover {
+.fa-bars:hover,
+.fa-xmark:hover {
+    color: #2EC59A;
+}
+
+.cta-btn:hover,
+.cta-btn:focus {
     background: var(--lime-green);
     background: linear-gradient(48deg, rgba(49,211,92,.65) 0%, rgba(43,183,218,.65) 100%);
     cursor: pointer;
@@ -220,6 +227,7 @@ article {
     margin-top: 2em;
     overflow: hidden;
     width: 100%;
+    align-self: flex-start;
 }
 
 .services-section {
@@ -296,7 +304,8 @@ footer {
     text-decoration: none;
 }
 
-.footer-nav-container .col a:hover {
+.footer-nav-container .col a:hover,
+.footer-nav-container .col a:focus {
     color: #42e892d5;
 }
 
@@ -315,16 +324,16 @@ footer {
     margin: 0 .4em;
 }
 
-.media-icon:hover {
-    cursor: pointer;
+.media-icon:hover,
+.media-icon:focus {
     filter: sepia(25%) saturate(10000%) hue-rotate(80deg) brightness(90%) contrast(118%);
-    
+    outline: none;
 }
 
 
 /* MEDIA QUERIES */
 
-@media (min-width: 760px) {
+@media (min-width: 820px) {
     body {
         text-align: left;
     }
@@ -335,7 +344,8 @@ footer {
         display: block;
     }
     
-    .hamburger, 
+    .fa-bars,
+    .fa-xmark, 
     .footer-nav-container, 
     .bg-decor-mobile {
         display: none;
@@ -429,7 +439,36 @@ footer {
     .hero-img {
         max-width: 900px;
     }
-
-    
 }
 
+@media (max-width: 820px) {
+    .hamburger-nav {
+        display: flex;
+        background-color: white;
+        position: absolute;
+        top: 4.2em;
+        right: 1em;
+        width: 90vw;
+        max-width: 300px;
+        border-radius: .3em;
+        padding: 1em 0;
+        -webkit-box-shadow: 3px 10px 188px 0px rgba(0,0,0,0.75);
+        -moz-box-shadow: 3px 10px 188px 0px rgba(0,0,0,0.75);
+        box-shadow: 3px 10px 188px 0px rgba(0,0,0,0.75);
+    }
+    
+    .hamburger-nav ul {
+        display: flex;
+        flex-direction: column;
+        margin: auto;
+    }
+    
+    .hamburger-nav a{
+        color: var(--dark-blue);
+        font-weight: 400;
+    }
+
+    nav li::after {
+        top: 1.7em;
+    }
+}
